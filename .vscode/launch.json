@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'binarytree'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=binarytree",
+                    "--package=binarytree"
+                ],
+                "filter": {
+                    "name": "binarytree",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'binarytree'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=binarytree",
+                    "--package=binarytree"
+                ],
+                "filter": {
+                    "name": "binarytree",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
